@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /////////////////////////////////////////////////
+        document.write('<hr>');
+        //quero saber qual é o 1º multiplo comun de 13, 15 e 17
+        //NAO SEI quantas vezes o laço vai girar - essa é a resposta do problema
+        //nesse caso so posso utilizar os whiles
+        j=1;//contadora
+        achei = false;//nao achei => controladora => flag
+        while(achei == false){
+            if(j%13 == 0 && j%15==0 && j%17==0){
+                //achei = true;
+                
+                document.write(j);
+                break;
+            }
+            j++;
+        }   
+        
+
+        document.write('<hr>');
+        //quero saber quais são os multiplos comun de 3 que estão entre 1 e 100
+        //SEI qtas vezes o laço vai girar
+        //POSSO UTILIZAR O FOR OU OS WHILES
+        //O FOR É MAIS APROPRIADO
+        for(i=1;i<=100;i++){
+            if(i % 3 == 0){
+                document.write(`${i}, `)
+            }
+        }
+
+    </script>
+</body>
+</html>

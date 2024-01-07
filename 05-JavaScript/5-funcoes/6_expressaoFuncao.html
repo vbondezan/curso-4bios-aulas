@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //expressao  de função
+        //função anonima
+        let quadrado = function(num,texto){
+            let quad;
+            quad = num * num 
+            return(quad+ ' '+texto)
+        }
+        //arrow function
+        let quadrado2 = (num,texto)=>{
+            let quad;
+            quad = num * num 
+            return(quad+ ' '+texto)
+        }
+    </script>
+</head>
+<body>
+    <script>
+        document.write(quadrado)
+        document.write("<hr>")
+        document.write(quadrado2)
+    </script>
+    <hr>
+    <script>
+       let valor = prompt("entre com um valor") 
+       let oi = quadrado(valor,'Mané');
+       document.write(oi)
+    </script>
+    <hr>
+    <script>
+        let valor2 = prompt("entre com dois valor") 
+        let ui = quadrado2(valor2,'Xuxu Beleza');
+        alert(ui)
+    </script>
+    <hr>
+   
+</body>
+</html>

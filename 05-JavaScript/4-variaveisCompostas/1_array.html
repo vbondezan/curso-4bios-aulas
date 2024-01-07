@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cor=[];
+        cor[0]="Azul"
+        cor[1]="Rosa"
+        cor[2]="Verde"
+        cor[3]="Branco"
+        
+        document.write(cor+"<br>");
+        document.write(cor[1]+"<br>");
+        cor[1] = "Pink"
+        document.write(cor+"<br>");
+        document.write(cor.length+"<br>");//4
+        //////////////////////////////////////
+        document.write("<hr>");
+        //objeto literal - criado no formato JSON - Java Script Object Notation
+        let alunos = ['Tamires','Cristiane','Viviane','Murilo','Pablo','Vinicius','Ariadne','Gustavo','Paula']
+        document.write(alunos+"<br>");
+        document.write(alunos.length+"<br>");//5
+        document.write(alunos[2]+"<br>");//Viviane
+        document.write(alunos[3]+"<br>");//Murilo
+        alunos.sort();
+        document.write(alunos+"<br>");
+        /////////////////////////////////////////////////////////////////////
+        //Array simples é ensinado como vetor em logica de programação
+        //como abrir um array automaticamente
+        //for(i=1;i<=6;i++){
+        for(i=0; i< alunos.length;i++){
+            //document.write(i+", ")
+            document.write(alunos[i]+" - ")
+        }
+        document.write("<hr>");
+        let nota=[];
+        for(i=0; i< alunos.length;i++){
+           nota[i] = prompt("Entre com a nota para o aluno: " + alunos[i]+" - ")
+        }
+        document.write(nota);
+        document.write("<hr>");
+        /////////////////////////////////////////////////////
+        for(i=0; i< alunos.length;i++){
+            document.write(`${alunos[i]} - ${nota[i]}<br>`)
+        }
+        document.write("<hr>");
+        /////////////////////////////////////////////////////
+        //se aprovado ou recuperação ou reprovado
+        for(i=0; i< alunos.length;i++){
+            document.write(`${alunos[i]} - ${nota[i]} - `)
+            if(nota[i] >= 7){
+                document.write("Aprovado <br>");
+            }else if(nota[i] >= 5){
+                document.write("Recuperação <br>");
+            }else{
+                document.write("Reprovado <br>");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //declaração de função
+        function quadrado(num,texto){
+            let quad;
+            quad = num * num 
+            return(quad+ ' '+texto)
+        }
+    </script>
+</head>
+<body>
+    <script>
+       let valor = prompt("entre com um valor") 
+       let oi = quadrado(valor,'Mané');
+       document.write(oi)
+    </script>
+    <hr>
+    <script>
+        let valor2 = prompt("entre com dois valor") 
+        let ui = quadrado(valor2,'Xuxu Beleza');
+        alert(ui)
+    </script>
+    <hr>
+    <script>
+       document.write(quadrado(prompt("entre com tres valor"),'Pablo'));
+    </script>
+    <hr>
+    <script>
+       alert(quadrado(prompt("entre com dois valor"),'Roberta Close'));
+    </script>
+    <hr>
+</body>
+</html>

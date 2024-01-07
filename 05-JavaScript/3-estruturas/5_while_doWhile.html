@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let num =  Number(window.prompt('entre com o numero de giros'))
+        
+       document.write('<hr> WHILE ... DO!!!!<br>')
+        cont = 1;
+       while(cont <= num){//Enquanto cont for menor ou igual a num faça
+            document.write(`${cont}, `);
+            cont++;
+       }
+
+       ///////////////////////////////////////////////////////////
+       document.write('<hr> Do...WHILE!!!!<br>')
+       //repita ... ate
+       conta = 1;
+       do{//faça: 
+            document.write(`${conta}, `);
+            conta++;
+       }while(conta <= num)//Enquanto cont for menor ou igual a num 
+
+       ///////////////////////////////////////////////////////////
+       document.write('<hr> PARA conto DE 1 ATÉ 10 PASSO 1 FAÇA <br>')
+        
+       for(conto = 1;conto <= num ;conto++ ){//Enquanto cont for menor ou igual a num faça
+            document.write(`${conto}, `);
+       }
+
+       ///////////////////////////////////////////////////////////
+
+
+       document.write('<hr> FIM!!!!')
+    </script>
+</body>
+</html>

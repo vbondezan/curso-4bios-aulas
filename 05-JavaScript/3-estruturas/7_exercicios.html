@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr{
+            width:50%;
+            color:blue;
+            height:1px;
+            background-color: green;
+            border: 1px solid green;;
+        }
+        table,td{
+            border:1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr><!-- table row-->
+            <td>Murilo</td><!-- table data-->
+            <td>Vinicius</td>
+            <td>Viviane</td>
+            <td>Tamires</td>
+        </tr>
+        <tr>
+            <td>Pablo</td>
+            <td>Anitta</td>
+        </tr>
+    </table>
+
+
+
+    <script>
+        let num;
+
+        //num = prompt('entre com um numero entre 1 e 10')
+        /*
+        if(num >= 1 && num <=10){
+            //montar uma tabela
+        }else{
+            //pedir o numero novamente
+        }
+        */
+        do{
+            //pedir o numero novamente
+            num = prompt('entre com um numero entre 1 e 10')
+        }while(num < 1 || num > 10)
+
+        //montar a tabela
+        document.write(num);
+        document.write("<hr>");
+
+        document.write("<table>");
+            for(i=1;i<=10;i++){
+                document.write("<tr>")
+                    document.write("<td>"+i+"</td>")
+                    document.write("<td>*</td>")
+                    document.write(`<td>${num}</td>`)
+                    document.write("<td>=</td>")
+                    document.write(`<td>${i*num}</td>`)
+                document.write("</tr>")    
+            }
+        document.write("</table>");
+    </script>
+</body>
+</html>

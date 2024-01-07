@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+        class mae
+        classe generica - super classe
+        pilar da abstração - nao pode ser instanciada
+        */
+        class Conta{
+            //propriedades
+            titular
+            agencia
+            numero
+            saldo
+
+            //this aponta para o objeto
+            //metodo
+            mostrarSaldo(){
+                console.log('O saldo de '+ this.titular+' é: '+ this.saldo)
+            }
+            depositar(valor){
+                console.log('eu deposito')
+            }
+            sacar(valor){
+                console.log('eu sacar')
+            }  
+        }
+
+        //herança
+        /*
+        classe especifica - sub classe
+        */
+       class contaEspecial extends Conta{
+            limite = 1000
+
+            //overrite de metodo - sobre escrever o metodo
+            //polimorfismo
+            mostrarSaldo(){
+                console.log('O saldo disponivel de '+ this.titular+' é: '+ (this.saldo + this.limite))
+            }
+       }
+       
+       class contaConjunta extends Conta{
+            titular2="Conje"
+       }
+
+       //herança multipla ou herança horizontal
+       //class contaConjuntaEspecial extends ContaEspecial extends contaConjunta
+       
+        
+       
+       let edu = new contaEspecial;
+       edu.saldo = 5500;
+       edu.titular="Edu Pretel"
+       console.log(edu)
+       edu.mostrarSaldo()
+
+       let tamires = new contaConjunta;
+       console.log(tamires)
+
+    </script>
+</body>
+</html>

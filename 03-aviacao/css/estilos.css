@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    background-image: url('../imagens/tra6.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /**/background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+/***********************************************************/
+/*head*/
+#topo{
+    height:200px;
+    line-height: 200px;
+    background-color: black;
+    color:white;
+}
+h1{
+    font-size: 60px;
+    text-align: center;
+}
+/**************************************************************/
+/* nav */
+nav#menu{
+    position: fixed;
+    top:230px;
+    left:0;
+}
+ol{
+    width:200px;
+    list-style-type: none;
+}
+li{
+    border:1px solid black;
+    height:40px;
+    width:20px;
+    transition: width 1s;
+}
+li:hover{
+    width:100%;
+}
+/* 
+LoVe HAte
+l:link 
+v:visited 
+h:hover 
+a:active
+*/
+
+nav#menu a:link,nav#menu a:visited{
+   padding-left: 20px;
+    height:100%;
+    display: block;
+    background-color: white;
+    border-left: red 2px solid;
+    overflow: hidden;
+
+    color:grey;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    transition: all 1s;
+}
+nav#menu a:hover,nav#menu a:active{
+    background-color: black;
+    border-left: aqua 2px solid;
+    color:white;
+    text-decoration:underline ;
+    
+}
+/************************************************************/
+/* todas as sessions */
+section{
+    /* Transparencia */
+    /*caixa toda fique transparente
+    opacity: 0.5;
+    */
+    /* transparencia na cor de fundo
+    background-color: rgb(255,255,255);
+    */
+    background-color: rgba(255,255,255,.75);
+    width:80%;
+    margin:20px auto ;/* TopBottom LeftRight */
+    padding: 30px;
+    /*border: 2px black solid;*/
+    border-radius: 30px;
+    font-size: 20px;
+}
+.esquerda{
+    float:left;
+    margin-right: 15px;
+}
+.direita{
+    float:right;
+    margin-left: 15px;
+}
+h2{
+    text-align: center;
+}
+section p{
+    margin:5px 0;
+    text-align: justify;
+    text-indent: 50px;
+}
+section p::first-letter{
+    font-size: 50px;
+    color:red;
+    background-color: rgba(247, 211, 121, .5);
+}
+/************************************************************/
+/*rodape*/
+#rodape{
+    height:100px;
+    line-height: 100px;
+    background-color: black;
+    color:white;
+}
+#rodape p{
+    text-align: center;
+}

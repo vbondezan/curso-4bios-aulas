@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //operador de atribuição
+        //num <- 5 //variavel num recebe o valor 5 ou o valor 5 é atribuido à variavel num
+        //No JS o operador de atribuição é o sinal "="
+        let num = 5;
+        console.log(num);
+        //alert(num)
+        document.write(num)
+
+        num = 652;
+        console.log(num)
+
+        //acumular numa variavel
+        num = num + 8;
+        console.log(num)//660
+        //forma reduzida
+        num += 8;//num = num + 8
+        console.log(num)//668
+        //de 1 em 1 - incremento e decremento - somente para operaçoes de adição e subtração
+        num++;//num = num +1
+        console.log(num)//669
+        ++num;//num = num +1
+        console.log(num)//670
+        num--;//num = num - 1
+        console.log(num)//669
+        --num;//num = num -1
+        console.log(num)//668
+
+        ////////////////////////////////////////////////////////////////////
+        //operador de concatenação ou  operador literal ou operador de string
+        let nome = "Eduardo "
+        console.log(nome)//Eduardo
+        nome = nome + "Pretel "//
+        console.log(nome)//EduardoPretel  "20"+"30"="2030"
+        nome += "Filho"//nome = nome + "Filho"
+        console.log(nome)//Eduardo Pretel Filho
+
+        let jogo = "Mortal"+" "+"Combat"
+        console.log(jogo)
+        
+        console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+        /////////////////////////////////////////////////////////////////////
+        //OPERADORES ARITIMETICOS
+        /*
+        + adição
+        - subtração
+        * multiplicação
+        / divisao
+        % resto da divisão
+        ** potencia
+        */
+
+        console.log(5+3)
+        console.log(5-3)
+        console.log(5*3)
+        console.log(5/3)
+        console.log(5%3)
+        console.log(5**3)//5*5*5
+
+        //objetos do JS - window console document
+        //Math
+        //let num2 = pow(5,3)
+        let num2 = Math.pow(5,3)
+        console.log(num2)
+
+        //https://www.w3schools.com/js/js_math.asp
+        console.log(Math.pow(8,5))
+        console.log(Math.sqrt(64))//8
+        //outras raizes serão por potencia
+        console.log(Math.pow(64,1/2))//8
+        console.log(Math.pow(125,1/3))//5
+
+        console.log(25.3)//5
+        console.log(Math.round(25.3))//25
+        console.log(Math.round(25.7))//26
+        console.log(Math.floor(25.7))//25
+        console.log(Math.ceil(25.3))//26
+
+        console.log(Math.max(25,36,14,85,12,41,74))//85
+        console.log(Math.min(25,36,14,85,12,41,74))//12
+
+        //conversao de valores
+        console.log("5.3"+3)//5.33 - conversão implicita
+        console.log(parseFloat("5.3")+3)//8.3 - conversão explicita
+        console.log(parseInt("5.3")+3)//8
+        console.log(Number("5.3")+3)//8.3
+
+        /////////////////////////////////////////////////////
+        console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+        console.log('operação de comparação')
+        //comparam 2 valores apenas e retornam true ou false
+        console.log('igualdade')
+        //vai comparar dois valoers e não verificará o tipo
+        let x = 9;
+        console.log( x == 5)//false
+        console.log( x == 9)//true
+        console.log( x == '9')//true//vai comparar dois valoers e não verificará o tipo
+        console.log( "5" == 5)//true//vai comparar dois valoers e não verificará o tipo
+
+        console.log('identicidade')//verifica o valor e o tipo
+        console.log( x === '9')//false - verifica o valor e o tipo
+        console.log( "5" === 5)//false
+        console.log( "5" === '5')//true
+        console.log( "5" === `5`)//true
+
+        console.log('diferente')
+        //vai comparar dois valoers e não verificará o tipo
+        // <> - nao existe mais
+        //utilizar o operador de negação
+ 
+        console.log( x != 5 )//true
+        console.log( x != 9 )//false
+        console.log( x != '9')//false
+
+
+        console.log('nao identicidade')//verifica o valor e o tipo
+        console.log( x !== '9')//true - verifica o valor e o tipo
+        console.log( "5" !== 5 )//true
+
+        /////////////////////////////////////////////////////
+        console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+        console.log('maior e menor')
+        /*
+        < - menor
+        > - maior
+        <= - menor ou igual
+        >= - maior ou igual
+        não existe => nem =<
+        */
+       console.log(4 <= 4 );//true
+       console.log(3 <= 4 );//true
+       console.log(5 <= 4 );//false
+       console.log(5 > 4 );//true
+       console.log(5 < 4 );//true
+
+       /////////////////////////////////////////////////////
+       console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+        console.log('Operadores logicos')
+        //permite que eu faça mais de uma operação, porem ele retorna apenas um resultado
+        console.log('Operadores logicos and')
+        //AND -> && => TODAS as verificações devem retornar true para que o CONJUNTP TODO  retorn true
+        console.log(5=='5' && 5 != 6 );//(V && V) => V
+        console.log(5=='5' && 5 == 6 );//(V && F) => F
+        console.log(5 !='5' && 5 == 6 );//(F && F) => F
+        console.log(5=='5' && 5 != 6 && 5 === "5");//(V && V && F) => F
+
+        console.log('Operadores logicos OR')
+        //or -> ||  => BASTA UMA  das verificações retornar true para que o CONJUNTPO TODO  retorn true
+        console.log(5 =='5' || 5 != 6 );//(V || V) => V
+        console.log(5=='5' || 5 == 6 );//(V || F) => V
+        console.log(5 !='5' || 5 == 6 );//(F && F) => F
+        console.log(5=='5' || 5 != 6 || 5 === "5");//(V || V || F) => V
+        console.log(5!='5' || 5 != 6 || 5 === "5");//(F || V || F) => V
+
+        console.log('Operadores logicos XOR')
+        //xor -> ^  => SOMENTE UMA  das verificações PODE retornar true para que o CONJUNTPO TODO  retornE true - x=> EXCLUSIVE / OU UNICO, OU EXCLUSIVO
+        console.log(5 =='5' ^ 5 != 6 );//(V ^ V) => F
+        console.log(5=='5' ^ 5 == 6 );//(V ^ F) => V
+        console.log(5 !='5' ^ 5 == 6 );//(F ^ F) => F
+        console.log(5=='5' ^ 5 != 6 ^ 5 === "5");//(V ^ V ^ F) => F
+        console.log(5!='5' ^ 5 != 6 ^ 5 === "5");//(F ^ V ^ F) => V
+        /*
+        Tabela verdade
+        p1  p2  &&  ||  xor
+        V   V   V   V   F
+        V   F   F   V   V
+        F   V   F   V   V
+        F   F   F   F   F
+        */
+
+        ////////////////////////////////////////////////////////////////////
+        //OPERADOR TERNARIO
+        //RETORNAR OUTRA OPÇÃO PARA TRUE OU FALSE
+        console.log('OPERADOR TERNARIO')
+        console.log((5 == '5'))
+        console.log((5 == '5')?("Igual"):("Diferente"))
+
+        console.log((5 != '5'))//false
+        console.log((5 != '5')?("Diferente"):("Igual"))
+
+        
+        console.log((5 == '5')?("Valeu"):("Mané"))//Valeu
+        console.log((5 != '5')?("Valeu"):("Mané"))//Mané
+
+    </script>
+</body>
+</html>

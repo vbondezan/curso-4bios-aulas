@@ -1,0 +1,100 @@
+/*
+seletor generico  - mais generico de todos - mais generico que o seletor de tags
+*/
+*{
+    border:1px solid black;
+}
+body{
+    background-color: lightcoral;
+    margin:0;
+}
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:red;
+    font-style: italic;
+}
+
+/* 
+    CSS - Cascade Style Sheet - Folha de estilos em cascata 
+    cascata no que diz respeito aos seletores
+
+    acessando pelo id -> #ta -> acessando no html quem tiver o id="ta" -> o mais especifico -> prioridade alta -> se houver colisão é ele quem ficará valendo
+
+    acessando pela class -> .um -> acessando no html quem tiver class="um" ->especificidade media -> prioridade media -> se houver colisão é o segundo  que terá prioridade
+
+    acessando pelas tag -> section -> acessandop no html que for tag session -> o menos especifico -> o mais generico -> prioridade baixa -> se houver colisão é o que não terá prioridade
+
+*/
+
+section{
+    background-color: aquamarine;
+    border:3px solid black;
+    padding:50px;
+    text-decoration: underline;
+}
+.um{
+    background-color: bisque;
+    border: 6px solid red;
+    margin:100px;
+}
+#ta{
+    background-color: gray;
+    text-shadow: 5px 5px 10px;
+}
+
+/* box model */
+#caixa{
+    border:5px solid black;
+    margin:100px;
+    padding:20px;
+    /* o  width é a largura do conteudo e nao da caixa
+    pois por padrao a propriedade box-sizing:content-box
+    e nao precisa se declarada
+    para ajustar: mudar 
+    width:950px 
+    
+    ou
+
+    manter:display: width:1000px;
+    box-sizing:border-box
+    ;
+    */
+    width:1000px;
+    height:120px;
+    box-sizing:border-box;
+
+    background-color: beige;
+    text-align: justify;
+    color:black;
+}
+
+/***********************************************************/
+/* menu */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    background-color: blue;
+   
+}
+ol{
+    background-color: aqua;
+   
+    /*
+    list-style-position: inside;
+    list-style-type: lower-greek;
+    */
+    list-style-type: none;
+}
+li{
+    background-color: crimson;
+    width:12.5%;
+    float:left;
+}
+a{
+    background-color: yellow;
+    display:block;
+    text-align: center;
+}

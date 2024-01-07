@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //planta de uma casa
+        //modelo para criar mais do que uma unidade
+        //class para criar mais de uma variavel
+        class Conta{
+            //propriedades
+            titular
+            agencia
+            numero
+            saldo
+
+            mostrarSaldo(){
+                console.log('eu mostro o saldo')
+            }
+            depositar(valor){
+                console.log('eu deposito')
+            }
+            depositar(sacar){
+                console.log('eu sacar')
+            }
+
+            
+        }
+
+        //variavel criada a partir da classe vai corresponder à casa criada a partir da planta
+        //new é o construtor de objetos
+        //let a = 15;
+        //alert(a)
+        let edu = new Conta
+        let Tamires = new Conta
+        edu.titular="Edu Pretel"
+        edu.saldo=1000
+        Tamires.saldo=10000
+        Tamires.titular = "Tamires Fujii"
+        
+        //mostrarSaldo();//mostrarSaldo is not defined
+        edu.mostrarSaldo();
+        Tamires.mostrarSaldo();
+
+        alert(edu.titular)
+        alert(Tamires.titular)
+
+        
+        console.log(edu)
+        console.log(Tamires)
+
+
+
+    </script>
+</body>
+</html>
